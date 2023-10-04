@@ -1,3 +1,4 @@
+import 'package:ecommerce_app/core/global/theme/themeData/theme_data_dark.dart';
 import 'package:ecommerce_app/core/global/theme/themeData/theme_data_light.dart';
 import 'package:ecommerce_app/core/utils/context_extenssion.dart';
 import 'package:flutter/material.dart';
@@ -31,7 +32,7 @@ class MyApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        locale: const Locale('ar'),
+        locale: const Locale('en'),
         debugShowCheckedModeBanner: false,
         initialRoute: '/splash_screen',
         routes: context.routes,

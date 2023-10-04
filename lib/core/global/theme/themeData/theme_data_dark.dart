@@ -4,25 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 ThemeData getThemeDataDark() => ThemeData(
-  brightness: Brightness.light,
-  primaryColor: AppColorsDark.primaryColor,
-  primaryColorLight: AppColorsDark.primaryColor,
-  primaryColorDark: AppColorsDark.primaryColor,
-  canvasColor: AppColorsDark.primaryColor,
-  scaffoldBackgroundColor: AppColorsDark.backgroundColor,
-  bottomAppBarColor: AppColorsDark.primaryColor,
 
-  cardColor: AppColorsDark.primaryColor,
-  dividerColor: AppColorsDark.primaryColor,
-  focusColor: AppColorsDark.primaryColor,
-  hoverColor: AppColorsDark.primaryColor,
-  errorColor: AppColorsDark.primaryColor,
-  textSelectionTheme: const TextSelectionThemeData(
-    cursorColor: AppColorsDark.primaryColor,
-    selectionColor: AppColorsDark.primaryColor,
-    selectionHandleColor: AppColorsDark.primaryColor,
-  ),
-  appBarTheme: const AppBarTheme(
+  brightness: Brightness.dark,
+  primaryColor: AppColorsDark.primaryColor,
+  scaffoldBackgroundColor: AppColorsDark.backgroundColor,
+  // bottomAppBarColor: AppColorsDark.primaryColor,
+  cardColor: AppColorsDark.caredColor,
+  appBarTheme:  AppBarTheme(
     color: AppColorsDark.appBarColor,
     iconTheme: IconThemeData(color: AppColorsDark.appBarColor),
     textTheme:  TextTheme(
@@ -33,19 +21,8 @@ ThemeData getThemeDataDark() => ThemeData(
       ),
     ), systemOverlayStyle: SystemUiOverlayStyle.dark,
   ),
-  buttonTheme: const ButtonThemeData(
-    buttonColor: AppColorsDark.primaryColor,
-    textTheme: ButtonTextTheme.primary,
-  ),
-  iconTheme: const IconThemeData(color: AppColorsDark.primaryColor),
   textTheme: GoogleFonts.poppinsTextTheme().apply(
-    bodyColor: AppColorsDark.primaryColor, // Set the text color to white
-  ),
-  primaryTextTheme: const TextTheme(
-    headline6: TextStyle(fontSize: 20.0, color: AppColorsDark.primaryColor),
-  ),
-  accentTextTheme: const TextTheme(
-    bodyText2: TextStyle(fontSize: 16.0, color: AppColorsDark.primaryColor),
+    bodyColor: AppColorsDark.appColorWithe, // Set the text color to white
   ),
   inputDecorationTheme: const InputDecorationTheme(
     border: OutlineInputBorder(),
@@ -53,6 +30,28 @@ ThemeData getThemeDataDark() => ThemeData(
     fillColor: AppColorsDark.primaryColor,
     filled: true,
     labelStyle: TextStyle(color: AppColorsDark.primaryColor),
+  ),
+
+
+  dividerColor: AppColorsDark.primaryColor,
+  focusColor: AppColorsDark.primaryColor,
+  hoverColor: AppColorsDark.appColorWithe,
+  textSelectionTheme: const TextSelectionThemeData(
+    cursorColor: AppColorsDark.primaryColor,
+    selectionColor: AppColorsDark.primaryColor,
+    selectionHandleColor: AppColorsDark.primaryColor,
+  ),
+  buttonTheme: const ButtonThemeData(
+    buttonColor: AppColorsDark.primaryColor,
+    textTheme: ButtonTextTheme.primary,
+  ),
+  iconTheme: const IconThemeData(color: AppColorsDark.primaryColor),
+
+  primaryTextTheme: const TextTheme(
+    headline6: TextStyle(fontSize: 20.0, color: AppColorsDark.primaryColor),
+  ),
+  accentTextTheme: const TextTheme(
+    bodyText2: TextStyle(fontSize: 16.0, color: AppColorsDark.primaryColor),
   ),
   sliderTheme: SliderThemeData(
     activeTrackColor: AppColorsDark.primaryColor,
@@ -112,20 +111,19 @@ ThemeData getThemeDataDark() => ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      primary: AppColorsDark.primaryColor,
-      onPrimary: AppColorsDark.primaryColor,
-      elevation: 4.0,
-      textStyle: const TextStyle(fontWeight: FontWeight.bold),
+      foregroundColor: AppColorsDark.appColorWithe,
+      backgroundColor: AppColorsDark.primaryColor,
+      textStyle: const TextStyle(fontWeight: FontWeight.bold,color: AppColorsDark.appColorWithe,fontFamily: "RedHatDisplay"),
     ),
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(
     style: OutlinedButton.styleFrom(
-      primary: AppColorsDark.primaryColor,
-      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
+      foregroundColor: AppColorsDark.primaryColor, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8.0)),
       side: const BorderSide(color: AppColorsDark.primaryColor),
       textStyle: const TextStyle(fontWeight: FontWeight.bold),
     ),
   ),
+
   dialogTheme: const DialogTheme(
     backgroundColor: AppColorsDark.primaryColor,
     titleTextStyle: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
@@ -154,7 +152,7 @@ ThemeData getThemeDataDark() => ThemeData(
   ),
   textButtonTheme: TextButtonThemeData(
     style: TextButton.styleFrom(
-      primary: AppColorsDark.primaryColor,
+      foregroundColor: AppColorsDark.primaryColor,
       backgroundColor: AppColorsDark.transparent,
       textStyle: const TextStyle(fontWeight: FontWeight.bold),
     ),

@@ -7,25 +7,33 @@ ThemeData getThemeDataLight() => ThemeData(
   brightness: Brightness.light,
   primaryColor: AppColorsLight.primaryColor,
   primaryColorLight: AppColorsLight.primaryColor,
-  // primaryColorDark: AppColorsLight.primaryColor,
+  primaryColorDark: AppColorsLight.primaryColor,
   canvasColor: AppColorsLight.primaryColor,
-  scaffoldBackgroundColor: AppColorsLight.primaryColor,
+  scaffoldBackgroundColor: AppColorsLight.backgroundColor,
   bottomAppBarColor: AppColorsLight.primaryColor,
-  cardColor: AppColorsLight.primaryColor,
+  cardColor: AppColorsLight.caredColor,
   dividerColor: AppColorsLight.primaryColor,
   focusColor: AppColorsLight.primaryColor,
   hoverColor: AppColorsLight.primaryColor,
   errorColor: AppColorsLight.primaryColor,
-  textTheme: GoogleFonts.poppinsTextTheme().apply(
-    bodyColor: AppColorsLight.textColorBlack, // Set the text color to white
-  ),
-  textSelectionTheme: const TextSelectionThemeData(
+
+  // textTheme: TextTheme(
+  //   displayMedium: TextStyle(fontFamily: "RedHatDisplay"),
+  //   labelLarge: TextStyle(fontFamily: "RedHatDisplay"),
+  //   displayLarge: TextStyle(fontFamily: "RedHatDisplay"),
+  //   bodyMedium: TextStyle(fontFamily: "RedHatDisplay"),
+  //   titleSmall: TextStyle(fontFamily: "RedHatDisplay"),
+  //   headline2: TextStyle(fontFamily: "RedHatDisplay"),
+  //   bodyText2: TextStyle(fontFamily: "RedHatDisplay"),
+  // ),
+
+textSelectionTheme: const TextSelectionThemeData(
     cursorColor: AppColorsLight.primaryColor,
     selectionColor: AppColorsLight.primaryColor,
     selectionHandleColor: AppColorsLight.primaryColor,
   ),
   appBarTheme: const AppBarTheme(
-    color: AppColorsLight.primaryColor,
+    color: AppColorsLight.backgroundColor,
     iconTheme: IconThemeData(color: AppColorsLight.primaryColor),
     textTheme:  TextTheme(
       headline6: TextStyle(
@@ -111,10 +119,9 @@ ThemeData getThemeDataLight() => ThemeData(
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
-      primary: AppColorsLight.primaryColor,
-      onPrimary: AppColorsLight.primaryColor,
-      elevation: 4.0,
-      textStyle: const TextStyle(fontWeight: FontWeight.bold),
+      foregroundColor: AppColorsLight.appColorWithe,
+      backgroundColor: AppColorsLight.primaryColor,
+      textStyle: const TextStyle(fontWeight: FontWeight.bold,color: AppColorsLight.appColorWithe,fontFamily: "RedHatDisplay"),
     ),
   ),
   outlinedButtonTheme: OutlinedButtonThemeData(

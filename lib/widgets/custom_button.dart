@@ -7,21 +7,19 @@ class CustomButton extends StatelessWidget {
     super.key,
     required this.text,
   });
+
   final String text;
 
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed: () {
-      },
-      style: ElevatedButton.styleFrom(
-          minimumSize: Size(double.infinity.w, 50.h)
-      ),
+      onPressed: () {},
+      style:
+          ElevatedButton.styleFrom(minimumSize: Size(double.infinity.w, 50.h)),
       child: CustomText(
         title: text,
         fontSize: 14,
         alignment: AlignmentDirectional.center,
-        // colorText: Colors.white,
       ),
     );
   }

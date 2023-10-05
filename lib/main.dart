@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/core/global/theme/themeData/theme_data_dark.dart';
-import 'package:ecommerce_app/core/global/theme/themeData/theme_data_light.dart';
 import 'package:ecommerce_app/core/utils/context_extenssion.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) {
         return  MaterialApp(
-        theme: getThemeDataLight(),
+        theme: getThemeDataDark(),
         localizationsDelegates: const [
           AppLocalizations.delegate,
           GlobalWidgetsLocalizations.delegate,

@@ -6,7 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomButtonSocial extends StatelessWidget {
   const CustomButtonSocial({
     super.key,
-     required this.text,
+    required this.text,
     required this.image,
   });
 
@@ -17,16 +17,12 @@ class CustomButtonSocial extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        border: Border.all(
-          width: 1,
-          color: AppColorsLight.textColorGray
-        ),
-        borderRadius: BorderRadius.circular(4)
-      ),
+          border: Border.all(width: 1, color: AppColorsLight.textColorGray),
+          borderRadius: BorderRadius.circular(4)),
       child: InkWell(
         onTap: () {},
         child: Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 5.w,vertical: 10.h),
+          padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
           child: Row(
             children: [
               const Spacer(),
@@ -38,16 +34,14 @@ class CustomButtonSocial extends StatelessWidget {
               const Spacer(
                 flex: 2,
               ),
-               CustomText(
+              CustomText(
                 title: text,
                 fontSize: 18,
                 alignment: AlignmentDirectional.center,
-                // colorText: AppColorsLight.textColorBlack,
               ),
-               const Spacer(
+              const Spacer(
                 flex: 3,
               ),
-
             ],
           ),
         ),

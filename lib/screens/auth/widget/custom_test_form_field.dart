@@ -35,16 +35,14 @@ class CustomTextFormField extends StatelessWidget {
         TextFormField(
           controller: controller,
           validator: validator,
-          keyboardType: keyboardType ,
+          keyboardType: keyboardType,
           onSaved: onSave,
           decoration: InputDecoration(
-            enabledBorder:  buildUnderlineInputBorder(AppColorsLight.textColorGray),
-            focusedBorder: buildUnderlineInputBorder(AppColorsLight.textColorGreen),
+            enabledBorder:
+                buildUnderlineInputBorder(AppColorsLight.textColorGray),
+            focusedBorder:
+                buildUnderlineInputBorder(AppColorsLight.textColorGreen),
             hintText: hint,
-            hintStyle: const TextStyle(
-              color: Colors.black,
-            ),
-            fillColor: Colors.transparent,
           ),
         )
       ],
@@ -53,7 +51,7 @@ class CustomTextFormField extends StatelessWidget {
 
   UnderlineInputBorder buildUnderlineInputBorder(final Color color) {
     return UnderlineInputBorder(
-            borderSide: BorderSide(color: color),
-          );
+      borderSide: BorderSide(color: color),
+    );
   }
 }

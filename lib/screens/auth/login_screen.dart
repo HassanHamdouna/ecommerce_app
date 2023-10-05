@@ -34,15 +34,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const CustomText(
-                        title: "Welcome,",
-                        // colorText: AppColorsLight.textColorBlack,
+                      CustomText(
+                        title: context.localizations.welcome, // Updated
                         fontSize: 30,
                       ),
                       GestureDetector(
                         onTap: () => Navigator.pushNamed(context, '/register_screen'),
-                        child: const CustomText(
-                          title: "Sign Up",
+                        child: CustomText(
+                          title: context.localizations.signUp, // Updated
                           colorText: AppColorsLight.textColorGreen,
                           fontSize: 18,
                         ),
@@ -52,9 +51,8 @@ class _LoginScreenState extends State<LoginScreen> {
                   SizedBox(
                     height: 10.h,
                   ),
-                  const CustomText(
-                    title: "Sign in to Continue",
-                    // colorText: AppColorsLight.textColorGray,
+                  CustomText(
+                    title: context.localizations.signInToContinue, // Updated
                     fontSize: 14,
                   ),
                   SizedBox(
@@ -69,7 +67,6 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     validator: (value) {
                       if (value == null) {
-                        print("ERROR");
                       }
                     },
                   ),
@@ -78,31 +75,29 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   CustomTextFormField(
                     keyboardType: TextInputType.visiblePassword,
-                    text: 'Password',
+                    text: context.localizations.password,
                     hint: '**********',
                     onSave: (value) {
                       // controller.password = value;
                     },
                     validator: (value) {
                       if (value == null) {
-                        print('error');
                       }
                     },
                   ),
                   SizedBox(
                     height: 20.h,
                   ),
-                  const CustomText(
-                    title: 'Forgot Password ?',
+                  CustomText(
+                    title: context.localizations.forgotPassword, // Updated
                     fontSize: 14,
                     alignment: AlignmentDirectional.centerEnd,
-                    // colorText: Colors.black,
                   ),
                   SizedBox(
                     height: 20.h,
                   ),
                   CustomButton(
-                    text: 'SIGN IN'.toUpperCase(),
+                    text: context.localizations.signIN.toUpperCase(), // Updated
                   ),
                   SizedBox(
                     height: 15.h,
@@ -114,19 +109,19 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(
             height: 40.h,
           ),
-          const CustomText(
-              title: '- OR -',
-              fontSize: 20,
-              // colorText: Colors.black,
-              alignment: AlignmentDirectional.center),
+          CustomText(
+            title: '- ${context.localizations.or} -',
+            fontSize: 20,
+            alignment: AlignmentDirectional.center,
+          ),
           SizedBox(
             height: 20.h,
           ),
-          const  CustomButtonSocial(text: 'Sing in With Facebook',image: 'assets/images/facebook.png',),
+          CustomButtonSocial(text: context.localizations.signInWithFacebook, image: 'assets/images/facebook.png',),
           SizedBox(
             height: 20.h,
           ),
-          const  CustomButtonSocial(text: 'Sing in With Google',image: 'assets/images/google.png',),
+          CustomButtonSocial(text: context.localizations.signInWithGoogle, image: 'assets/images/google.png',),
         ],
       ),
     );

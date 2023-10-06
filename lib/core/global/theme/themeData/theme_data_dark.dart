@@ -9,15 +9,16 @@ ThemeData getThemeDataDark() => ThemeData(
       scaffoldBackgroundColor: AppColorsDark.backgroundColor,
       // bottomAppBarColor: AppColorsDark.primaryColor,
       cardColor: AppColorsDark.caredColor,
-      appBarTheme: AppBarTheme(
-        color: AppColorsDark.appBarColor,
-        iconTheme: IconThemeData(color: AppColorsDark.appBarColor),
-        textTheme: TextTheme(
-          headline6: TextStyle(
-            color: AppColorsDark.appBarColor,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-          ),
+      appBarTheme: const AppBarTheme(
+        color: AppColorsDark.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: IconThemeData(color: AppColorsDark.appColorWithe),
+        titleTextStyle: TextStyle(
+          color: AppColorsDark.appColorWithe,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          fontFamily: "RedHatDisplay",
         ),
         systemOverlayStyle: SystemUiOverlayStyle.dark,
       ),

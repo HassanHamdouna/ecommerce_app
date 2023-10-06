@@ -9,6 +9,7 @@ class CustomText extends StatelessWidget {
     this.fontSize = 12,
     this.alignment = AlignmentDirectional.centerStart,
     this.maxLine = 1,
+    this.height = 1,
   });
 
   final String title;
@@ -16,6 +17,7 @@ class CustomText extends StatelessWidget {
   final int fontSize;
   final AlignmentDirectional alignment;
   final int maxLine;
+  final double? height;
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class CustomText extends StatelessWidget {
           fontFamily: "RedHatDisplay",
           fontSize: fontSize.sp,
           color: colorText,
+          height: height,
         ),
         maxLines: maxLine,
       ),

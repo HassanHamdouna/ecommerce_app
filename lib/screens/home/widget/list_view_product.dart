@@ -13,7 +13,9 @@ class ListViewProduct extends StatelessWidget {
       scrollDirection: Axis.horizontal,
       itemBuilder: (context, index) {
         return GestureDetector(
-          onTap: () {},
+          onTap: () {
+            Navigator.pushNamed(context, '/details_screen');
+          },
           child: Container(
             width: MediaQuery.of(context).size.width * .4,
             child: Column(
@@ -67,6 +69,5 @@ class ListViewProduct extends StatelessWidget {
         width: 20.w,
       ),
     );
-
   }
 }

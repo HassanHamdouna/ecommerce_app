@@ -32,14 +32,15 @@ ThemeData getThemeDataLight() => ThemeData(
         selectionHandleColor: AppColorsLight.primaryColor,
       ),
       appBarTheme: const AppBarTheme(
-        color: AppColorsLight.backgroundColor,
-        iconTheme: IconThemeData(color: AppColorsLight.primaryColor),
-        textTheme: TextTheme(
-          headline6: TextStyle(
-            color: AppColorsLight.primaryColor,
-            fontSize: 20.0,
-            fontWeight: FontWeight.bold,
-          ),
+        color: AppColorsLight.transparent,
+        elevation: 0,
+        centerTitle: true,
+        iconTheme: IconThemeData(color: AppColorsLight.textColorBlack),
+        titleTextStyle: TextStyle(
+          color: AppColorsLight.textColorBlack,
+          fontSize: 20.0,
+          fontWeight: FontWeight.bold,
+          fontFamily: "RedHatDisplay",
         ),
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),

@@ -46,14 +46,19 @@ class HomeScreen extends StatelessWidget {
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
-                  CustomText(
+                children:  [
+                  const CustomText(
                     title: "Best Selling",
                     fontSize: 18,
                   ),
-                  CustomText(
-                    title: "See all",
-                    fontSize: 16,
+                  InkWell(
+                    onTap: (){
+                      Navigator.pushNamed(context, '/result_product_or_category_screen');
+                    },
+                    child: const CustomText(
+                      title: "See all",
+                      fontSize: 16,
+                    ),
                   ),
                 ],
               ),

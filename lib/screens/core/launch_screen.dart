@@ -36,7 +36,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
             bottom: 80.h,
             left: 100.w,
             right: 90.w,
-            child: const CustomText(title: ' S C A N N I N G ', fontSize: 24),
+            child: const CustomText(title: ' S C A N N I N G ', fontSize: 24,colorText: Colors.white),
           )
         ],
       ),

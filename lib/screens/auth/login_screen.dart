@@ -35,13 +35,13 @@ class _LoginScreenState extends State<LoginScreen> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       CustomText(
-                        title: context.localizations.welcome, // Updated
+                        title: context.localizations.welcome, 
                         fontSize: 30,
                       ),
                       GestureDetector(
                         onTap: () => Navigator.pushNamed(context, '/register_screen'),
                         child: CustomText(
-                          title: context.localizations.signUp, // Updated
+                          title: context.localizations.signUp, 
                           colorText: AppColorsLight.textColorGreen,
                           fontSize: 18,
                         ),
@@ -52,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 10.h,
                   ),
                   CustomText(
-                    title: context.localizations.signInToContinue, // Updated
+                    title: context.localizations.signInToContinue, 
                     fontSize: 14,
                   ),
                   SizedBox(
@@ -89,7 +89,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20.h,
                   ),
                   CustomText(
-                    title: context.localizations.forgotPassword, // Updated
+                    title: context.localizations.forgotPassword, 
                     fontSize: 14,
                     alignment: AlignmentDirectional.centerEnd,
                   ),
@@ -97,7 +97,10 @@ class _LoginScreenState extends State<LoginScreen> {
                     height: 20.h,
                   ),
                   CustomButton(
-                    text: context.localizations.signIN.toUpperCase(), // Updated
+                    text: context.localizations.signIN.toUpperCase(),
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, "/home_screen");
+                    },
                   ),
                   SizedBox(
                     height: 15.h,
@@ -117,11 +120,15 @@ class _LoginScreenState extends State<LoginScreen> {
           SizedBox(
             height: 20.h,
           ),
-          CustomButtonSocial(text: context.localizations.signInWithFacebook, image: 'assets/images/facebook.png',),
+          CustomButtonSocial(text: context.localizations.signInWithFacebook, image: 'assets/images/facebook.png',onTap: (){
+            
+          }),
           SizedBox(
             height: 20.h,
           ),
-          CustomButtonSocial(text: context.localizations.signInWithGoogle, image: 'assets/images/google.png',),
+          CustomButtonSocial(text: context.localizations.signInWithGoogle, image: 'assets/images/google.png',onTap: (){
+            
+          }),
         ],
       ),
     );

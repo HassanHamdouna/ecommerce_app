@@ -91,6 +91,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   CustomButton(
                     text: context.localizations.signUp.toUpperCase(),
+                    onPressed: () {
+
+                    },
                   ),
                   SizedBox(
                     height: 15.h,

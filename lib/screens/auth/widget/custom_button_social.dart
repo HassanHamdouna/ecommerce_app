@@ -8,10 +8,12 @@ class CustomButtonSocial extends StatelessWidget {
     super.key,
     required this.text,
     required this.image,
+    required this.onTap,
   });
 
   final String text;
   final String image;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +22,7 @@ class CustomButtonSocial extends StatelessWidget {
           border: Border.all(width: 1, color: AppColorsLight.textColorGray),
           borderRadius: BorderRadius.circular(4)),
       child: InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 5.w, vertical: 10.h),
           child: Row(

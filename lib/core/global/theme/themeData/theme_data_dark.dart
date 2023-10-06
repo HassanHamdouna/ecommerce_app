@@ -25,7 +25,6 @@ ThemeData getThemeDataDark() => ThemeData(
         bodyColor: AppColorsDark.appColorWithe, // Set the text color to white
       ),
       inputDecorationTheme: const InputDecorationTheme(
-        border: OutlineInputBorder(),
         focusedBorder: OutlineInputBorder(
             borderSide: BorderSide(color: AppColorsDark.primaryColor)),
         fillColor: AppColorsDark.transparent,

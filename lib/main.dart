@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           ],
           locale: const Locale('en'),
           debugShowCheckedModeBanner: false,
-          initialRoute: '/splash_screen',
+          initialRoute: '/cart_screen',
           routes: context.routes,
         );
       },

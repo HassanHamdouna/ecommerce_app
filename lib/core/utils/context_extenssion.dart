@@ -1,5 +1,6 @@
 import 'package:ecommerce_app/screens/auth/login_screen.dart';
 import 'package:ecommerce_app/screens/auth/register_screen.dart';
+import 'package:ecommerce_app/screens/cart/cart_screen.dart';
 import 'package:ecommerce_app/screens/core/launch_screen.dart';
 import 'package:ecommerce_app/screens/home/details_screen.dart';
 import 'package:ecommerce_app/screens/home/home_screen.dart';
@@ -17,6 +18,8 @@ extension ContextHelper on BuildContext {
     '/home_screen': (context, {arguments}) =>  HomeScreen(),
     '/details_screen': (context, {arguments}) =>  const DetailsScreen(),
     '/result_product_or_category_screen': (context, {arguments}) =>  const ResultProductOrCategoryScreen(),
+
+    '/cart_screen': (context, {arguments}) =>  const CartScreen(),
   };
 
   AppLocalizations get localizations {

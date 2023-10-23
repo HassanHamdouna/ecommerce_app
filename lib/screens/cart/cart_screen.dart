@@ -123,7 +123,7 @@ class CartScreen extends StatelessWidget {
                       width: 180,
                       height: 120,
                       child: CustomButton(
-                        onPressed: () {},
+                        onPressed: () => Navigator.pushNamed(context, '/checkout_delivery'),
                         text: 'CHECKOUT',
                       ),
                     ),

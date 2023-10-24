@@ -3,6 +3,7 @@ import 'package:ecommerce_app/screens/auth/register_screen.dart';
 import 'package:ecommerce_app/screens/cart/cart_screen.dart';
 import 'package:ecommerce_app/screens/checkout/checkout_address.dart';
 import 'package:ecommerce_app/screens/checkout/checkout_delivery.dart';
+import 'package:ecommerce_app/screens/checkout/checkout_order_summary.dart';
 import 'package:ecommerce_app/screens/core/launch_screen.dart';
 import 'package:ecommerce_app/screens/home/details_screen.dart';
 import 'package:ecommerce_app/screens/home/home_screen.dart';
@@ -25,6 +26,7 @@ extension ContextHelper on BuildContext {
 
     '/checkout_delivery': (context, {arguments}) =>  const CheckoutDelivery(),
     '/checkout_address': (context, {arguments}) =>  const CheckoutAddress(),
+    '/checkout_order_summary': (context, {arguments}) =>  const CheckoutOrderSummary(),
   };
 
   AppLocalizations get localizations {

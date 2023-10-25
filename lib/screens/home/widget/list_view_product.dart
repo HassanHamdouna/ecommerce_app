@@ -16,7 +16,7 @@ class ListViewProduct extends StatelessWidget {
           onTap: () {
             Navigator.pushNamed(context, '/details_screen');
           },
-          child: Container(
+          child: SizedBox(
             width: MediaQuery.of(context).size.width * .4,
             child: Column(
               children: [

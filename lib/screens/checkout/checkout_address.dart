@@ -1,5 +1,4 @@
 import 'package:ecommerce_app/core/global/theme/appColor/app_colors_dark.dart';
-import 'package:ecommerce_app/core/utils/context_extenssion.dart';
 import 'package:ecommerce_app/screens/auth/widget/custom_test_form_field.dart';
 import 'package:ecommerce_app/widgets/custom_button.dart';
 import 'package:ecommerce_app/widgets/custom_text.dart';
@@ -18,7 +17,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       appBar: AppBar(
         title: const Text("Checkout"),
         leading: IconButton(
@@ -30,25 +29,30 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 10.w),
         children: [
-        Row(
-          children: [
-            Checkbox(
-            checkColor: Colors.white,
-            activeColor: AppColorsDark.textColorGreen,
-            // fillColor: MaterialStateProperty.resolveWith((states) {
-            //   isChecked ? Colors.grey :Colors.grey;
-            // }),
-            value: isChecked,
-            shape: const CircleBorder(),
-            onChanged: (bool? value) {
-              setState(() {
-                isChecked = value!;
-              });
-            },
-      ),
-            const CustomText(title: "Billing address is the same as delivery address",fontSize: 14),
-          ],
-        ),
+          Row(
+            children: [
+              Transform.scale(
+                scale: 1.5,
+                // Adjust the scale factor as needed to make it larger
+                child: Checkbox(
+                  checkColor: Colors.white,
+                  activeColor: AppColorsDark.textColorGreen,
+                  value: isChecked,
+                  visualDensity: VisualDensity(horizontal: 4.0, vertical: 4.0),
+                  // Adjust the values as needed
+                  shape: const CircleBorder(),
+                  onChanged: (bool? value) {
+                    setState(() {
+                      isChecked = value!;
+                    });
+                  },
+                ),
+              ),
+              const CustomText(
+                  title: "Billing address is the same as delivery address",
+                  fontSize: 14),
+            ],
+          ),
           SizedBox(
             height: 30.h,
           ),
@@ -60,8 +64,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
               // controller.email = value;
             },
             validator: (value) {
-              if (value == null) {
-              }
+              if (value == null) {}
             },
           ),
           SizedBox(
@@ -75,8 +78,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
               // controller.email = value;
             },
             validator: (value) {
-              if (value == null) {
-              }
+              if (value == null) {}
             },
           ),
           SizedBox(
@@ -90,8 +92,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
               // controller.email = value;
             },
             validator: (value) {
-              if (value == null) {
-              }
+              if (value == null) {}
             },
           ),
           SizedBox(
@@ -108,8 +109,7 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
                     // controller.email = value;
                   },
                   validator: (value) {
-                    if (value == null) {
-                    }
+                    if (value == null) {}
                   },
                 ),
               ),
@@ -125,12 +125,10 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
                     // controller.email = value;
                   },
                   validator: (value) {
-                    if (value == null) {
-                    }
+                    if (value == null) {}
                   },
                 ),
               ),
-
             ],
           ),
           SizedBox(
@@ -139,35 +137,31 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-            ElevatedButton(
-              onPressed: () => Navigator.pop(context),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColorsDark.transparent,
-                elevation: 0,
-                minimumSize: Size(150.w, 50.h), shape: RoundedRectangleBorder(
-              side:  const BorderSide(
-                  color: AppColorsDark.textColorGreen,
-                  width: 2
+              ElevatedButton(
+                onPressed: () => Navigator.pop(context),
+                style: ElevatedButton.styleFrom(
+                    backgroundColor: AppColorsDark.transparent,
+                    elevation: 0,
+                    minimumSize: Size(150.w, 50.h),
+                    shape: RoundedRectangleBorder(
+                      side: const BorderSide(
+                          color: AppColorsDark.textColorGreen, width: 2),
+                      borderRadius: BorderRadius.circular(5),
+                    )),
+                child: const CustomText(
+                  title: 'BACK',
+                  fontSize: 14,
+                  alignment: AlignmentDirectional.center,
+                ),
               ),
-              borderRadius: BorderRadius.circular(5),
-            )),
-            child:  const CustomText(
-              title: 'BACK',
-              fontSize: 14,
-              alignment: AlignmentDirectional.center,
-            ),
-          ),
               CustomButton(
-                onPressed: () => Navigator.pushNamed(context, '/checkout_order_summary'),
+                onPressed: () =>
+                    Navigator.pushNamed(context, '/checkout_order_summary'),
                 text: 'NEXT',
                 sizeWight: 150,
               ),
-
             ],
           ),
-
-
-
         ],
       ),
     );

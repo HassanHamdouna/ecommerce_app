@@ -24,6 +24,7 @@ class CustomText extends StatelessWidget {
     return Align(
       alignment: alignment,
       child: Text(
+        overflow: TextOverflow.ellipsis,
         title,
         style: TextStyle(
           fontFamily: "RedHatDisplay",

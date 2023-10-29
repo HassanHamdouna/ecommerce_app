@@ -27,7 +27,7 @@ class _CheckoutOrderSummaryState extends State<CheckoutOrderSummary> {
             )),
       ),
       body: Padding(
-        padding:  EdgeInsets.symmetric(horizontal: 10.h,vertical: 20.w),
+        padding: EdgeInsets.symmetric(horizontal: 10.h, vertical: 20.w),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
@@ -117,12 +117,14 @@ class _CheckoutOrderSummaryState extends State<CheckoutOrderSummary> {
                 ),
                 Expanded(
                   child: Transform.scale(
-                    scale: 1.5, // Adjust the scale factor as needed to make it larger
+                    scale: 1.5,
+                    // Adjust the scale factor as needed to make it larger
                     child: Checkbox(
                       checkColor: Colors.white,
                       activeColor: AppColorsDark.textColorGreen,
                       value: isChecked,
-                      visualDensity: VisualDensity(horizontal: 4.0, vertical: 4.0), // Adjust the values as needed
+                      visualDensity:
+                          const VisualDensity(horizontal: 4.0, vertical: 4.0),
                       shape: const CircleBorder(),
                       onChanged: (bool? value) {
                         setState(() {
@@ -166,8 +168,7 @@ class _CheckoutOrderSummaryState extends State<CheckoutOrderSummary> {
                   ),
                 ),
                 CustomButton(
-                  onPressed: () =>
-                      Navigator.pushNamed(context, '/'),
+                  onPressed: () => Navigator.pushNamed(context, '/'),
                   text: 'Deliver',
                   sizeWight: 150,
                 ),
@@ -176,7 +177,6 @@ class _CheckoutOrderSummaryState extends State<CheckoutOrderSummary> {
             SizedBox(
               height: 20.h,
             ),
-
           ],
         ),
       ),

@@ -1,9 +1,11 @@
 import 'package:ecommerce_app/core/global/theme/appColor/app_colors_dark.dart';
+import 'package:ecommerce_app/core/utils/context_extenssion.dart';
 import 'package:ecommerce_app/screens/auth/widget/custom_test_form_field.dart';
 import 'package:ecommerce_app/widgets/custom_button.dart';
 import 'package:ecommerce_app/widgets/custom_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:status_change/status_change.dart';
 
 class CheckoutAddress extends StatefulWidget {
   const CheckoutAddress({super.key});
@@ -31,22 +33,16 @@ class _CheckoutAddressState extends State<CheckoutAddress> {
         children: [
           Row(
             children: [
-              Transform.scale(
-                scale: 1.5,
-                // Adjust the scale factor as needed to make it larger
-                child: Checkbox(
-                  checkColor: Colors.white,
-                  activeColor: AppColorsDark.textColorGreen,
-                  value: isChecked,
-                  visualDensity: VisualDensity(horizontal: 4.0, vertical: 4.0),
-                  // Adjust the values as needed
-                  shape: const CircleBorder(),
-                  onChanged: (bool? value) {
-                    setState(() {
-                      isChecked = value!;
-                    });
-                  },
-                ),
+              Checkbox(
+                checkColor: Colors.white,
+                activeColor: AppColorsDark.textColorGreen,
+                value: isChecked,
+                shape: const CircleBorder(),
+                onChanged: (bool? value) {
+                  setState(() {
+                    isChecked = value!;
+                  });
+                },
               ),
               const CustomText(
                   title: "Billing address is the same as delivery address",

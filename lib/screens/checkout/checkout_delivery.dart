@@ -11,8 +11,8 @@ class CheckoutDelivery extends StatefulWidget {
 }
 
 class _CheckoutDeliveryState extends State<CheckoutDelivery> {
+  int? _radioValue = 00;
 
-   int? _radioValue = 00;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,31 +27,29 @@ class _CheckoutDeliveryState extends State<CheckoutDelivery> {
       body: Padding(
         padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
         child: Column(
-          children:  [
+          children: [
             const CustomText(
               title: "Standard Delivery",
               fontSize: 18,
             ),
-            Row(
-                children: [
-                  const CustomText(
-                    title: "Order will be delivered between 3 - 5  \nbusiness days",
-                    fontSize: 12,
-                    maxLine: 2,
-                    height: 1.5,
-                  ),
-                  const Spacer(),
-                  Radio(
-                    value: 0,
-                    groupValue: _radioValue,
-                    onChanged: (val) {
-                      setState(() {
-                        _radioValue = val;
-                      });
-                    },
-                  ),
-                ]
-            ),
+            Row(children: [
+              const CustomText(
+                title: "Order will be delivered between 3 - 5  \nbusiness days",
+                fontSize: 12,
+                maxLine: 2,
+                height: 1.5,
+              ),
+              const Spacer(),
+              Radio(
+                value: 0,
+                groupValue: _radioValue,
+                onChanged: (val) {
+                  setState(() {
+                    _radioValue = val;
+                  });
+                },
+              ),
+            ]),
             SizedBox(
               height: 20.h,
             ),
@@ -59,26 +57,25 @@ class _CheckoutDeliveryState extends State<CheckoutDelivery> {
               title: "Next Day Delivery",
               fontSize: 18,
             ),
-            Row(
-                children: [
-                  const CustomText(
-                    title: "Place your order before 6pm and your items  \nwill be delivered the next day",
-                    fontSize: 12,
-                    maxLine: 2,
-                    height: 1,
-                  ),
-                  const Spacer(),
-                  Radio(
-                    value: 1,
-                    groupValue: _radioValue,
-                    onChanged: (val) {
-                      setState(() {
-                        _radioValue = val;
-                      });
-                    },
-                  ),
-                ]
-            ),
+            Row(children: [
+              const CustomText(
+                title:
+                    "Place your order before 6pm and your items  \nwill be delivered the next day",
+                fontSize: 12,
+                maxLine: 2,
+                height: 1,
+              ),
+              const Spacer(),
+              Radio(
+                value: 1,
+                groupValue: _radioValue,
+                onChanged: (val) {
+                  setState(() {
+                    _radioValue = val;
+                  });
+                },
+              ),
+            ]),
             SizedBox(
               height: 20.h,
             ),
@@ -86,26 +83,25 @@ class _CheckoutDeliveryState extends State<CheckoutDelivery> {
               title: "Nominated Delivery",
               fontSize: 18,
             ),
-            Row(
-                children: [
-                  const CustomText(
-                    title: "Pick a particular date from the calendar and \norder will be delivered on selected date",
-                    fontSize: 12,
-                    maxLine: 2,
-                    height: 1,
-                  ),
-                  const Spacer(),
-                  Radio(
-                    value: 2,
-                    groupValue: _radioValue,
-                    onChanged: (val) {
-                      setState(() {
-                        _radioValue = val;
-                      });
-                    },
-                  ),
-                ]
-            ),
+            Row(children: [
+              const CustomText(
+                title:
+                    "Pick a particular date from the calendar and \norder will be delivered on selected date",
+                fontSize: 12,
+                maxLine: 2,
+                height: 1,
+              ),
+              const Spacer(),
+              Radio(
+                value: 2,
+                groupValue: _radioValue,
+                onChanged: (val) {
+                  setState(() {
+                    _radioValue = val;
+                  });
+                },
+              ),
+            ]),
             SizedBox(
               height: 20.h,
             ),
@@ -113,11 +109,11 @@ class _CheckoutDeliveryState extends State<CheckoutDelivery> {
               children: [
                 const Spacer(),
                 CustomButton(
-                  onPressed: () => Navigator.pushNamed(context, '/checkout_address'),
+                  onPressed: () =>
+                      Navigator.pushNamed(context, '/checkout_address'),
                   text: 'NEXT',
                   sizeWight: 150,
                 ),
-
               ],
             ),
           ],
